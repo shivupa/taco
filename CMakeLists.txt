@@ -9,6 +9,8 @@ project(taco
   VERSION 0.1
   LANGUAGES C CXX
 )
+set(CMAKE_CXX_STANDARD 14)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
 option(CUDA "Build for NVIDIA GPU (CUDA must be preinstalled)" OFF)
 option(PYTHON "Build TACO for python environment" OFF)
 option(OPENMP "Build with OpenMP execution support" OFF)
@@ -99,7 +101,6 @@ endif(COVERAGE)
 
 set(C_CXX_FLAGS "${C_CXX_FLAGS}")
 set(CMAKE_C_FLAGS "${C_CXX_FLAGS}")
-set(CMAKE_CXX_FLAGS "${C_CXX_FLAGS} -std=c++14")
 
 set(TACO_PROJECT_DIR ${CMAKE_CURRENT_LIST_DIR})
 
